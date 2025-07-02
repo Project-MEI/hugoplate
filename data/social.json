@@ -1,0 +1,19 @@
+{
+    "main": [
+        {
+            "name": "Status",
+            "icon": "fas fa-signal",
+            "link": "https://status.project-mei.xyz/"
+        },
+        {
+            "name": "Discord",
+            "icon": "fab fa-discord",
+            "link": "https://dsc.gg/transience"
+        },
+        {
+            "name": "github",
+            "icon": "fab fa-github",
+            "link": "https://www.github.com/project-mei"
+        }
+    ]
+}

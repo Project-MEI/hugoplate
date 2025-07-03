@@ -34,5 +34,5 @@ features:
     button:
       enable: true
       label: "Learn More"
-      link: "#"
+      link: "blog/sirin"
 ---

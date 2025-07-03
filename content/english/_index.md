@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "See projects"
-    link: "#"
+    link: "categories/projects"
 
 # Features
 features:

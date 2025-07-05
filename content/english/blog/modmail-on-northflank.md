@@ -10,9 +10,11 @@ tags: ["modmail", "northflank", "discord bot"]
 draft: false
 ---
 
-Another alternative on a shrinking list of free-tier PaaS.
+Another alternative on a shrinking list of free tier PaaS.
 
-<!-- more -->
+{{< notice "warning" >}}
+Northflank has been observed to have uptime and reliability issues on their free project for a few months where deployed apps are constantly crashing or being restarted every few hours. Due to this, I no longer recommend hosting Modmail on Nortflank and __no support will be offered with this platform__. This guide will only serve as an archive from now on.
+{{< /notice >}}
 
 ## What is Northflank?
 

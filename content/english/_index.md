@@ -3,7 +3,7 @@
 banner:
   title: "Side projects made out of passion for tech, and [_the lightning maiden_](https://honkaiimpact3.fandom.com/wiki/Raiden_Mei)"
   content: ""
-  image: "/images/project-mei/Rainy_Springtide_(Figure).webp"
+  image: "/images/project-mei/herrscher_of_origin.webp"
   button:
     enable: true
     label: "See projects"

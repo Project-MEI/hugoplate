@@ -10,9 +10,14 @@ tags: ["homelab", "homeserver", "sirin"]
 draft: false
 ---
 
-## 🖥️ Hardware Overview
+## Why a Homelab
 
-Everything runs on a compact yet powerful **mini PC**, protected by a **UPS (Uninterruptible Power Supply)** to guard against power outages and ensure graceful shutdowns.
+I've always been an advocate on privacy and my dependance on third party services like Google Drive, Google Photos etc. and the increasing cost over time leads me to
+wanting to self host all these services for my personal needs. Plus, one of my friend had a server that was a bit too underpowered for hosting a Minecraft server we were playing at the time, hence fueling the desire for me to finally buy the hardware and start the project.
+
+## Hardware Overview
+
+Everything runs on a small **mini PC**, protected by a **UPS (Uninterruptible Power Supply)** to guard against power outages and ensure graceful shutdowns.
 
 - **CPU**: AMD Ryzen 7 8845HS (8 cores / 16 threads)  
 - **Memory**: 64GB DDR5 RAM @ 4800MHz  
@@ -21,46 +26,50 @@ Everything runs on a compact yet powerful **mini PC**, protected by a **UPS (Uni
   - **1× SSD for Proxmox VE OS**
   - **1× SSD dedicated to VM disk storage**
 - **Network**: 800 Mbps download / 200 Mbps upload fiber connection  
-- **Router**: Standard consumer router, handling DHCP, NAT, and internet routing for the homelab.
+- **Router**: Standard ISP-provided router, handling DHCP, NAT, and internet routing for the homelab.
 
-This setup provides a solid balance of performance, power efficiency, and uptime protection.
-
----
-
-## 🧱 Proxmox: The Foundation
-
-At the base of the system is **Proxmox VE**, an open-source hypervisor. It allows me to run and manage virtual machines and containers with fine-grained control, backups, snapshots, and automation support.
+I decided to go with a mini PC instead of a desktop since the minimal space it takes and the bang for buck it offers for the performance. The model is **GMKtec K8 Plus.**
 
 ---
 
-## 🧩 VM Breakdown by Role
+## The OS / Hypervisor
+
+I decided to go with [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) since mainly it's free and I'm a cheapskate, but most importantly the versatility it offers if I decide to play with unfamiliar operating systems and the amount of functionality it has over something like TrueNAS or Unraid.
+
+I also just had a lot of time to burn so Proxmox was the perfect choice for me to learn about sysadmin in general, and a few years later I'm pretty glad I did.
+
+---
+
+## VM Breakdown
 
 Each VM is purpose-built to keep workloads cleanly separated:
 
 - **🛰️ Network VM**  
-  Handles internal network services like **AdGuard Home**, **Tailscale**, and custom DNS/routing.
+  Handles internal networking services like **[Tailscale](https://tailscale.com/)**, **[Traefik](https://traefik.io/traefik)** etc.
 
 - **🎮 Game VM**  
-  Hosts multiplayer game servers such as **Minecraft** and **Palworld**, optimized for performance.
+  Hosts game servers such as **[Minecraft](https://www.minecraft.net/)** and **[Palworld](https://store.steampowered.com/app/1623730/Palworld/)**.
 
 - **💾 Storage VM**  
-  Runs apps that need high-capacity storage like **Nextcloud**, **Immich**, or backup services. Connected to the RAID 1 array.
+  Runs apps that need high-capacity storage like **[Nextcloud](https://nextcloud.com/)**, **[Immich](https://immich.app/)** etc. Connected to the RAID 1 array.
 
 - **⚙️ Apps VM**  
-  General-purpose utility server running **CasaOS**, which provides a GUI for easy Docker container management.
+  General-purpose utility server running **[CasaOS](https://casaos.zimaspace.com/)**, which provides a GUI for easy Docker container management.
 
 - **💻 Dev VM**  
-  My testing and development VM. App deployments here are managed with **Dokploy**.
+  My testing and development VM. App deployments here are managed with **[Dokploy](https://dokploy.com/)**.
 
 ---
 
-## 🧪 Automation with LXC + Ansible
+## LXC Containers
 
-I run a lightweight **LXC container** that hosts **Ansible Semaphore**, a web-based frontend for running Ansible playbooks. I use this to automate deployment tasks, container updates, and infrastructure changes.
+I run a lightweight **LXC container** that host **[Semaphore UI](https://semaphoreui.com/)**, a web-based frontend for running Ansible playbooks. I use this to automate deployment tasks, container updates, and infrastructure changes.
+
+There's also [Adguard Home LXC](https://community-scripts.github.io/ProxmoxVE/scripts?id=adguard) from the Helper Scripts repo, and [Backrest](https://community-scripts.github.io/ProxmoxVE/scripts?id=backrest) for syncing the VM backups to a remote S3 bucket.
 
 ---
 
-## 🐳 Container Management Tools
+## Container Management Tools
 
 Each VM runs apps using **Docker**, with different management layers depending on its role:
 
@@ -70,7 +79,7 @@ Each VM runs apps using **Docker**, with different management layers depending o
 
 ---
 
-## 💾 Backup & Sync Strategy
+## Backup & Sync Strategy
 
 To keep my data safe and recoverable:
 
@@ -79,27 +88,4 @@ To keep my data safe and recoverable:
 
 ---
 
-## 🔐 Why This Setup Works for Me
-
-- **Separation of Concerns**: Each VM has a clear purpose, making things easier to manage.
-- **Security**: App isolation through VMs and containers reduces risk.
-- **Automation**: Ansible + Dokploy = faster, reproducible deployments.
-- **Resilience**: RAID 1 storage, snapshots, and S3 backups give peace of mind.
-- **Learning-Friendly**: Mimics production infrastructure for learning and experimentation.
-
----
-
-## ⚙️ What’s Next?
-
-Eventually, I’d like to:
-
-- Add centralized logging and alerting  
-- Automate snapshot rotation and cleanup  
-- Explore lightweight LXC containers for smaller services  
-- Maybe experiment with Kubernetes down the line  
-
-For now, the setup is stable, fun, and extremely useful.
-
----
-
-Thanks for reading! 🚀
+That's it really, thanks for reading!

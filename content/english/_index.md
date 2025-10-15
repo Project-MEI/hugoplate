@@ -22,8 +22,8 @@ features:
       - "Doesn't sell your data (that's why I'm broke)"
     button:
       enable: true
-      label: "Invite Shogun"
-      link: "https://dsc.gg/shogun"
+      label: "See dashboard"
+      link: "https://dash.project-mei.xyz/"
 
   - title: "Sirin Homelab"
     image: "/images/project-mei/sirin.png"

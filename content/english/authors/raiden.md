@@ -17,4 +17,4 @@ description: Raiden Sakura
 #     link: https://ko-fi.com/raidensakura
 ---
 
-Founder of Project MEI. Loves all things tech, anime & games.
+It's a me, Raiden.

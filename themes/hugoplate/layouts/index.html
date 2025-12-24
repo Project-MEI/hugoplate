@@ -62,6 +62,24 @@
                   {{ . | markdownify }}
                 </li>
               {{ end }}
+              {{ range .cpu }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa-solid fa-microchip absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+              {{ range .memory }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa-solid fa-memory absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+              {{ range .storage }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa-solid fa-hard-drive absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
             </ul>
             {{ with .button }}
               {{ if .enable }}

@@ -8,26 +8,97 @@ description: "This is meta description"
 draft: false
 ---
 
-#### Responsibility of Contributors
+# Privacy Policy for Shogun Discord Bot
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+**Last updated:** 25 December 2025
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+Shogun is a Discord bot designed to provide features and functionality within Discord servers. Your privacy is important, and this policy explains what data Shogun may collect, how it is used, and how it is protected.
 
-#### Gathering of Personal Information
+---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+## 1. Information We Collect
 
-#### Protection of Personal- Information
+Shogun may collect and store the following data **only when required for bot functionality**:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+- Discord User IDs  
+- Discord Server (Guild) IDs  
+- Channel IDs  
+- Message content, *only when explicitly required for a command or feature*  
+- Configuration data related to bot settings (e.g. preferences, saved options)
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+Shogun **does not collect**:
+- Email addresses  
+- Passwords  
+- IP addresses  
+- Real-world personal information  
 
-#### Privacy Policy Changes
+---
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+## 2. How the Data Is Used
+
+Collected data is used solely to:
+
+- Execute bot commands  
+- Provide server-specific or user-specific features  
+- Store preferences or settings  
+- Improve stability and functionality  
+
+Data is **never sold, shared, or used for advertising purposes**.
+
+---
+
+## 3. Data Storage & Security
+
+- Data is stored securely  
+- Access is restricted to the bot owner/maintainer  
+- Reasonable measures are taken to prevent unauthorized access  
+
+---
+
+## 4. Data Retention
+
+- Data is retained **only as long as necessary** for the bot to function  
+- Server-related data may be deleted when the bot is removed from a server  
+- Users may request data removal (see Section 6)
+
+---
+
+## 5. Third-Party Services
+
+Shogun operates on Discord and is subject to:
+
+- Discord’s Privacy Policy  
+- Discord’s Terms of Service  
+
+Shogun does not intentionally share data with third-party services unless required for core functionality.
+
+---
+
+## 6. User Rights
+
+You have the right to:
+
+- Request information about stored data  
+- Request deletion of your data  
+- Ask questions regarding privacy and data usage  
+
+To make a request, contact the bot owner via Discord.
+
+---
+
+## 7. Children’s Privacy
+
+Shogun does not knowingly collect data from users under the age required by Discord’s Terms of Service. Use of the bot must comply with Discord’s rules.
+
+---
+
+## 8. Changes to This Policy
+
+This Privacy Policy may be updated from time to time. Any changes will be reflected with an updated revision date.
+
+---
+
+## 9. Contact
+
+For privacy concerns or questions, please contact the bot owner via Discord or via the contact form available on this site.
+

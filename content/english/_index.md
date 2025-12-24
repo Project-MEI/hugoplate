@@ -1,25 +1,25 @@
 ---
 # Banner
 banner:
-  title: "IDK What to put here but Hi welcome~!"
+  title: "Just a site for documenting tech stuff I learned"
   content: ""
-  image: "/images/project-mei/miss-pink.png"
+  image: "/images/project-mei/herrscher-of-human-ego.webp"
   button:
     enable: true
-    label: "See projects"
-    link: "categories/projects"
+    label: "See posts"
+    link: "blog"
 
 # Features
 features:
-  - title: "There are definitely things here!"
+  - title: "Shogun Discord Bot"
     image: "/images/project-mei/banner-img.png"
-    content: "Hi uh *forgets script*... **violently flips pages**<br>
-    I run Shogun bot, she's only able to be in 100 servers thanks to Discord not approving my verification request but here's her features!"
+    content: "A semi-public Discord bot powered by [Red](https://discord.red) with some cogs made by the community and a few others personally made by me.
+    Among her features are playing music, adminitration & moderation tools, message managements, server analytics and more."
     bulletpoints:
-      - "Very very cute ~~and funny~~ (**important**)"
-      - "Powered by Red, [<u>the open source bot</u>](https://discord.red)"
-      - "Runs virtualized on my own hardware"
-      - "Doesn't sell your data (that's why I'm broke)"
+      - "Runs virtualized on personally owned hardware with battery backup"
+      - "Runs containerized with Docker for security and isolation"
+      - "Off-site backup stored with a reputable provider"
+      - "No paid features with zero financial incentives"
     button:
       enable: true
       label: "See dashboard"
@@ -27,12 +27,18 @@ features:
 
   - title: "Sirin Homelab"
     image: "/images/project-mei/sirin.png"
-    content: "Sirin is where I run most of my apps, including Shogun. Despite the memorable, simple and elegant looking name it's
-    actually just a mini PC with (allegedly) overkill CPU and RAM, protected by a UPS and 800 Mbps networking."
-    bulletpoints:
-      - "CPU: Ryzen 7 8845HS"
-      - "Memory: 64 GB 4800 Mhz DDR5"
-      - "Storage: 1 TB NVMe Gen 3, 4 TB HDD (Raid 1)"
+    content: "Sirin is the name of my home server powering most if not all of my self-hosted apps/services.
+    The hardware itself may change depending on personal budget and circumstances but for now, it's simply a mini PC
+    with a pretty powerful 8-core mobile processor, hefty amount of RAM and enough storage for my needs."
+    cpu:
+      - "Ryzen 7 8845HS"
+    memory:
+      - "2 x 32 GB 4800 Mhz DDR5"
+    storage:
+      - "256 GB Teamgroup MP33 (Proxmox storage)"
+      - "1 TB Lexar NM710 (VM storage)"
+      - "1 TB Apacer AS350 (Backup storage)"
+      - "Dual 4 TB Hard Drives (Raid 1 Enclosure)"
     button:
       enable: true
       label: "Learn More"

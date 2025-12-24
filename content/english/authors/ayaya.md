@@ -5,4 +5,4 @@ image: "/images/project-mei/mei.webp"
 description: Ayaya
 ---
 
-Co-founder of Project MEI.
+The cutest and most beautiful person in the world.

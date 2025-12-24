@@ -2,7 +2,7 @@
     "main": [
         {
             "name": "Status",
-            "icon": "fas fa-signal",
+            "icon": "fas fa-chart-line",
             "link": "https://status.project-mei.xyz/"
         },
         {

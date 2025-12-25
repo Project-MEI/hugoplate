@@ -24,11 +24,16 @@
       <!-- Personal Projects -->
       <h2 class="text-2xl font-semibold mb-6">Personal Projects</h2>
       <div
-        class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+        class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr mb-12">
         {{ $personal := where site.RegularPages "Params.category" "intersect" (slice "personal") }}
         {{ range $personal }}
           {{ partial "portfolio-card.html" . }}
         {{ end }}
+      </div>
+
+      <!-- Extra content -->
+      <div class="content mb-12">
+        {{ .Content }}
       </div>
     </div>
   </section>

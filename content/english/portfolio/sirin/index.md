@@ -5,7 +5,7 @@ tech:
   - SysAdmin
   - DevOps
 category: ["personal"]
-external: "https://project-mei.xyz"
+external: "/sike"
 ---
 
 {{< slider dir="images/project-mei/portfolio/sirin" class="w-full" height="600" width="600" webp="true" command="Fit" zoomable="true" >}}

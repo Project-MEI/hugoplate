@@ -1,0 +1,43 @@
+<div
+  class="rounded-xl border
+            bg-gradient-to-br from-white to-light
+            dark:from-darkmode-body dark:to-darkmode-light
+            border-border dark:border-darkmode-border
+            shadow-sm hover:shadow-md
+            transition flex flex-col">
+  <!-- Slider -->
+  <div class="rounded-t-xl overflow-hidden">
+    {{ .Content }}
+    <!-- Renders the slider shortcode from index.md -->
+  </div>
+
+  <!-- Card content -->
+  <div class="p-5 flex flex-col gap-3 flex-grow">
+    <h3 class="text-xl font-semibold text-text dark:text-darkmode-text">
+      {{ .Title }}
+    </h3>
+
+    {{ with .Params.tech }}
+      <p class="text-sm text-text-light dark:text-darkmode-text-light">
+        {{ delimit . ", " }}
+      </p>
+    {{ end }}
+
+
+    <p class="text-text-light dark:text-darkmode-text-light">
+      {{ .Params.summary }}
+    </p>
+
+    {{ with .Params.external }}
+      <div class="mt-auto">
+        <a
+          href="{{ . | safeURL }}"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-1 font-medium text-primary dark:text-darkmode-primary hover:underline">
+          Visit site →
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</div>

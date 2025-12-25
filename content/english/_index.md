@@ -14,7 +14,7 @@ features:
   - title: "Shogun Discord Bot"
     image: "/images/project-mei/banner-img.png"
     content: "A semi-public Discord bot powered by [Red](https://discord.red) with some cogs made by the community and a few others personally made by me.
-    Among her features are playing music, adminitration & moderation tools, message managements, server analytics and more."
+    Among her features are playing music, administration & moderation tools, message managements, server analytics and more."
     bulletpoints:
       - "Runs virtualized on personally owned hardware with battery backup"
       - "Runs containerized with Docker for security and isolation"

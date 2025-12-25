@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <section class="section">
+    <div class="container">
+      <!-- Page header -->
+      <div class="text-center mb-12">
+        <h1 class="h1">{{ .Title }}</h1>
+        {{ with .Params.description }}
+          <p class="text-lg text-text-light dark:text-darkmode-text-light">
+            {{ . }}
+          </p>
+        {{ end }}
+      </div>
+
+      <!-- Work Projects -->
+      <h2 class="text-center text-2xl font-semibold mb-6">Work Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr mb-12">
+        {{ $work := where site.RegularPages "Params.tags" "intersect" (slice "work") }}
+        {{ range $work }}
+          {{ partial "portfolio-card.html" . }}
+        {{ end }}
+      </div>
+
+      <!-- Personal Projects -->
+      <h2 class="text-center text-2xl font-semibold mb-6">Personal Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+        {{ $personal := where site.RegularPages "Params.tags" "intersect" (slice "personal") }}
+        {{ range $personal }}
+          {{ partial "portfolio-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -5,18 +5,20 @@
             border-border dark:border-darkmode-border
             shadow-sm hover:shadow-md
             transition flex flex-col">
-  <!-- Slider -->
-  <div class="rounded-t-xl overflow-hidden">
+  <!-- Slider (responsive) -->
+  <div class="w-full h-48 sm:h-64 md:h-72 overflow-hidden rounded-t-xl">
     {{ .Content }}
-    <!-- Renders the slider shortcode from index.md -->
+    <!-- slider shortcode from index.md -->
   </div>
 
   <!-- Card content -->
   <div class="p-5 flex flex-col gap-3 flex-grow">
+    <!-- Title -->
     <h3 class="text-xl font-semibold text-text dark:text-darkmode-text">
       {{ .Title }}
     </h3>
 
+    <!-- Tech stack -->
     {{ with .Params.tech }}
       <p class="text-sm text-text-light dark:text-darkmode-text-light">
         {{ delimit . ", " }}
@@ -24,10 +26,12 @@
     {{ end }}
 
 
+    <!-- Summary -->
     <p class="text-text-light dark:text-darkmode-text-light">
       {{ .Params.summary }}
     </p>
 
+    <!-- External link -->
     {{ with .Params.external }}
       <div class="mt-auto">
         <a

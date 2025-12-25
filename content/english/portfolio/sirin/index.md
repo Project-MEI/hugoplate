@@ -2,7 +2,8 @@
 title: "Sirin Homeserver"
 summary: "A self-hosted homeserver setup for personal projects."
 tech:
-  - Homeserver
+  - SysAdmin
+  - DevOps
 tags: ["personal"]
 external: "https://project-mei.xyz"
 ---

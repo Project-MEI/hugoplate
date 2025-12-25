@@ -5,6 +5,7 @@ tech:
   - CodeIgniter 4
   - Bootstrap
   - MySQL
+category: ["work"]
 external: "https://urbanparkhall.com"
 ---
 

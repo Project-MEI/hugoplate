@@ -3,7 +3,7 @@ title: "Shogun Discord Bot"
 summary: "Multi-purpose Discord bot"
 tech:
   - Python
-tags: ["personal"]
+category: ["personal"]
 external: "https://dash.project-mei.xyz"
 ---
 

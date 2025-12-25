@@ -4,7 +4,7 @@ summary: "A self-hosted homeserver setup for personal projects."
 tech:
   - SysAdmin
   - DevOps
-tags: ["personal"]
+category: ["personal"]
 external: "https://project-mei.xyz"
 ---
 

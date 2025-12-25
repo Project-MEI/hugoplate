@@ -5,7 +5,7 @@ tech:
   - CodeIgniter 4
   - Bootstrap
   - MySQL
-tags: ["work"]
+category: ["work"]
 external: "https://infotakaful.com"
 ---
 

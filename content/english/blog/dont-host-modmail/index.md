@@ -2,7 +2,7 @@
 title: "Why I stopped contributing to Modmail"
 meta_title: "Why I stopped contributing to Modmail"
 description: "There are just better alternatives"
-date: 2026-02-03T05:00:00Z
+date: 2026-03-02T05:00:00Z
 image: "/images/project-mei/modmail.png"
 categories: ["Updates"]
 author: "Raiden"

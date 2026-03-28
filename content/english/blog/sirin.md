@@ -34,58 +34,24 @@ I decided to go with a mini PC instead of a desktop since the minimal space it t
 
 ## The OS / Hypervisor
 
-I decided to go with [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) since mainly it's free and I'm a cheapskate, but most importantly the versatility it offers if I decide to play with unfamiliar operating systems and the amount of functionality it has over something like TrueNAS or Unraid.
+I decided to go with [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) since considered free (once you disable the NAG screen), but most importantly the versatility it offers if I decide to play with unfamiliar operating systems and the amount of functionality it has over something like TrueNAS or Unraid.
 
-I also just had a lot of time to burn so Proxmox was the perfect choice for me to learn about sysadmin in general, and a few years later I'm pretty glad I did.
-
----
-
-## VM Breakdown
-
-Each VM is purpose-built to keep workloads cleanly separated:
-
-- **🛰️ Network VM**  
-  Handles internal networking services like **[Tailscale](https://tailscale.com/)**, **[Traefik](https://traefik.io/traefik)** etc.
-
-- **🎮 Game VM**  
-  Hosts game servers such as **[Minecraft](https://www.minecraft.net/)** and **[Palworld](https://store.steampowered.com/app/1623730/Palworld/)**.
-
-- **💾 Storage VM**  
-  Runs apps that need high-capacity storage like **[Nextcloud](https://nextcloud.com/)**, **[Immich](https://immich.app/)** etc. Connected to the RAID 1 array.
-
-- **⚙️ Apps VM**  
-  General-purpose utility server running **[CasaOS](https://casaos.zimaspace.com/)**, which provides a GUI for easy Docker container management.
-
-- **💻 Dev VM**  
-  My testing and development VM. App deployments here are managed with **[Dokploy](https://dokploy.com/)**.
+I also just had a lot of time to burn so Proxmox was the perfect choice for me to learn about devops and sysadmin in general.
 
 ---
 
-## LXC Containers
+## The Workloads
 
-I run a lightweight **LXC container** that host **[Semaphore UI](https://semaphoreui.com/)**, a web-based frontend for running Ansible playbooks. I use this to automate deployment tasks, container updates, and infrastructure changes.
-
-There's also [Adguard Home LXC](https://community-scripts.github.io/ProxmoxVE/scripts?id=adguard) from the Helper Scripts repo, and [Backrest](https://community-scripts.github.io/ProxmoxVE/scripts?id=backrest) for syncing the VM backups to a remote S3 bucket.
+I run a few virtual machines and segregate workloads based on the application types and what services they're running. Most runs Debian server with all apps running in Docker and managed via Dockhand. One VM is running the free version of ZimaOS for non important apps that I can easily add or remove. Critical apps like Adguard (DNS Server) or Semaphore UI (Ansible UI) I run as LXC containers on the Proxmox host (courtesy of https://community-scripts.org/). I don't do clustering or High Availability (HA), I'm not that senile yet.
 
 ---
 
-## Container Management Tools
+## Backup Strategy
 
-Each VM runs apps using **Docker**, with different management layers depending on its role:
-
-- **CasaOS** on the Apps VM for easy GUI-based deployment.
-- **Dokploy** on the Dev VM for Git-driven YAML deployments.
-- **Portainer** on the other VMs for visual container management and orchestration.
+I run Proxmox Backup Server (PBS) as an LXC container and backup all of the VMs to it, with a mounted drive set as datastore. The same drive I then have mounted on another LXC running Duplicati, configured to sync my backups to an offsite S3 bucket. Since PBS and Duplicati deduplicates backup on its own, it save time and storage cost. Eventually, I seek to run PBS on its own separate machine but for now this setup works for non catastrophic failures since I can quickly recover snapshot and files in case of a data loss.
 
 ---
 
-## Backup & Sync Strategy
+## What's next
 
-To keep my data safe and recoverable:
-
-1. I use **Proxmox disk snapshots** to back up all VMs regularly.
-2. Snapshots are then **synced to a remote S3 bucket**, giving me offsite protection.
-
----
-
-That's it really, thanks for reading!
+When the time comes for me to go senile I'll eventually explore high availability and cluster my setup. I also plan to add a dedicated GPU and connect it via Oculink to that Mini PC and run some AI models on it when GPU prices make sense again.

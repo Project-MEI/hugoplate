@@ -20,11 +20,6 @@ url = "/blog"
 name = "Contact"
 url = "/contact"
 
-[[main]]
-weight = 2
-name = "Portfolio"
-url = "/portfolio"
-
 # footer menu
 [[footer]]
 name = "About"

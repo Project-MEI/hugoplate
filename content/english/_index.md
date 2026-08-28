@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "Just a site for documenting tech stuff I learned"
+  title: "Homelab, Discord Bot & Technical Things"
   content: ""
   image: "/images/project-mei/herrscher-of-human-ego.webp"
   button:
@@ -19,7 +19,7 @@ features:
       - "Runs virtualized on personally owned hardware with battery backup"
       - "Runs containerized with Docker for security and isolation"
       - "Off-site backup stored with a reputable provider"
-      - "No paid features with zero financial incentives"
+      - "A self-run project with no paywall (though donations are appreciated!)"
     button:
       enable: true
       label: "See dashboard"
@@ -27,18 +27,16 @@ features:
 
   - title: "Sirin Homelab"
     image: "/images/project-mei/sirin.png"
-    content: "Sirin is the name of my home server powering most if not all of my self-hosted apps/services.
-    The hardware itself may change depending on personal budget and circumstances but for now, it's simply a mini PC
-    with a pretty powerful 8-core mobile processor, hefty amount of RAM and enough storage for my needs."
+    content: "Sirin is the name of my home server powering most if not all of my self-hosted apps/services. It's an ecosystem of hardware and software stacks I personally planned and chose to replace proprietary and paid cloud services. It's currently hosting popular apps like Nextcloud, Immich and many more."
     cpu:
-      - "Ryzen 7 8845HS"
+      - "Ryzen 7 8845HS (8 core 16 threads)"
     memory:
-      - "2 x 32 GB 4800 Mhz DDR5"
+      - "64GB (32 x 2) 4800 Mhz OEM DDR5"
     storage:
-      - "256 GB Teamgroup MP33 (Proxmox storage)"
-      - "1 TB Lexar NM710 (VM storage)"
-      - "1 TB Apacer AS350 (Backup storage)"
-      - "Dual 4 TB Hard Drives (Raid 1 Enclosure)"
+      - "256 GB Teamgroup MP33 (Proxmox boot drive)"
+      - "1 TB Lexar NM710 (Storing VM disks)"
+      - "1 TB Apacer AS350 (Storing backups)"
+      - "Dual 4 TB Hard Drives (Raid Enclosure)"
     button:
       enable: true
       label: "Learn More"

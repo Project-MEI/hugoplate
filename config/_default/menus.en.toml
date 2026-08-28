@@ -32,6 +32,6 @@ url = "/about"
 weight = 1
 
 [[footer]]
-name = "Privacy Policy"
-url = "/privacy-policy"
-weight = 3
+name = "Homelab"
+url = "/sirin"
+weight = 2
